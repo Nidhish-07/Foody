@@ -1,4 +1,6 @@
 import styles from "./MenuList.module.css";
+import Card from "../UI/Card";
+import MenuItem from "./MenuItem";
 
 const DUMMY_MEALS = [
   {
@@ -28,11 +30,22 @@ const DUMMY_MEALS = [
 ];
 
 const MenuList = function (props) {
-  const menuList = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>);
+  const menuList = DUMMY_MEALS.map((meal) => (
+    <MenuItem
+      key={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    >
+      {meal.name}
+    </MenuItem>
+  ));
 
   return (
     <section className={styles.meals}>
-      <ul>{menuList}</ul>
+      <Card>
+        <ul>{menuList}</ul>
+      </Card>
     </section>
   );
 };
