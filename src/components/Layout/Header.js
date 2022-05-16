@@ -3,6 +3,7 @@ import React from "react";
 import CartButton from "./CartButton";
 import styles from "./Header.module.css";
 import foodPlate from "../../assets/davide-cantelli-jpkfc5_d-DI-unsplash.jpg";
+
 const Header = function (props) {
   return (
     <React.Fragment>
