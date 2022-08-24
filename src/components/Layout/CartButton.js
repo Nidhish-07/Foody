@@ -7,7 +7,7 @@ const CartButton = function (props) {
   const cartCtx = useContext(CartContext);
 
   const numberOfCartItems = cartCtx.items.reduce(
-    (accum, item) => accum + item,
+    (accum, item) => accum + item.amount,
     0
   );
 

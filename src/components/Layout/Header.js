@@ -12,7 +12,7 @@ const Header = function (props) {
         <CartButton onClick={props.onVisibleCart}></CartButton>
       </header>
 
-      <div>
+      <div className={styles["main-image"]}>
         <img
           src={foodPlate}
           alt="A Sushi Plate"

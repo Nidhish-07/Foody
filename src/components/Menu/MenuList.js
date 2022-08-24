@@ -33,12 +33,12 @@ const MenuList = function (props) {
   const menuList = DUMMY_MEALS.map((meal) => (
     <MenuItem
       key={meal.id}
+      id={meal.id}
       name={meal.name}
       description={meal.description}
       price={meal.price}
-    >
-      {meal.name}
-    </MenuItem>
+    />
+  
   ));
 
   return (
